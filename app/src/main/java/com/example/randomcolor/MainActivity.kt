@@ -4,6 +4,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import com.example.randomcolor.R
 import com.example.randomcolor.databinding.ActivityMainBinding
 import kotlin.random.Random
 
@@ -18,7 +19,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onListeners() {
-        val boxes = listOf(binding.box1, binding.box2, binding.box3, binding.box4, binding.box5)
+        val boxes = listOf(
+            binding.box1, binding.box2, binding.box3, binding.box4, binding.box5,
+            binding.box6, binding.box7, binding.box8, binding.box9, binding.box10, binding.box11,
+        )
         boxes.forEach { box ->
             box.setOnClickListener {
                 it.setBackgroundColor(Color.parseColor(randomColor()))
